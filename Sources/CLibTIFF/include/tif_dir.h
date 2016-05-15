@@ -26,6 +26,7 @@
 
 #ifndef _TIFFDIR_
 #define	_TIFFDIR_
+
 /*
  * ``Library-private'' Directory-related Definitions.
  */

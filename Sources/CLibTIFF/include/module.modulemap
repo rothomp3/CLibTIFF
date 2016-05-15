@@ -1,8 +1,5 @@
 module CLibTIFF [system] {
-	header "tiffconf.h"
 	header "tiff.h"
-	header "tiffio.h"
-	header "tiffvers.h"
-	link "tiff"
 	export *
+	link "tiff"
 }

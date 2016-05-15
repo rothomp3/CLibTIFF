@@ -5,6 +5,7 @@
   from this file in your programs.
 */
 
+
 #ifndef _TIFFCONF_
 #define _TIFFCONF_
 
