@@ -522,6 +522,8 @@ extern int TIFFYCbCrToRGBInit(TIFFYCbCrToRGB*, float*, float*);
 extern void TIFFYCbCrtoRGB(TIFFYCbCrToRGB *, uint32, int32, int32,
     uint32 *, uint32 *, uint32 *);
 
+#include "SwiftWrapper.h"
+
 /****************************************************************************
  *               O B S O L E T E D    I N T E R F A C E S
  *
