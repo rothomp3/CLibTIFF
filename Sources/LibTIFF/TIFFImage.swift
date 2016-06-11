@@ -33,6 +33,28 @@ public class TIFFImage {
 		case GetField
 	}
 
+
+    public init(readAt path: String) throws {
+        guard let ptr = TIFFOpen(path, "r") else {
+            throw Errors.Open
+        }
+        tiffref = ptr
+        self.size = Size(0,0)
+        self.hasAlpha = false
+        self.buffer = UnsafeMutablePointer<UInt8>(allocatingCapacity: 0)
+        self.path = path
+        self.bitsPerSample = 0
+        self.samplesPerPixel = 0
+        self.rowsPerStrip = 0
+        self.extraChannels = []
+        self.photometric = 0
+        self.planarconfig = 0
+        self.orientation = 0
+
+        try readFields()
+    }
+
+
 	public init(writeAt path: String, _ buffer: UnsafeMutablePointer<UInt8>, _ size: Size, hasAlpha: Bool) throws {
 		guard let ptr = TIFFOpen(path, "w") else {
 			throw Errors.Open
