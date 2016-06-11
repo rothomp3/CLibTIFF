@@ -1,2 +1,2 @@
-# LibTIFF
-A TIFF image library for swift.
+# CLibTIFF
+The TIFF image library compiled for use with the Swift PM.
