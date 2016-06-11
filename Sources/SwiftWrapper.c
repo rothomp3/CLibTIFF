@@ -22,3 +22,7 @@ int TIFFSetField_uint16(TIFF *tif, ttag_t tag, uint16 v) {
 int TIFFSetField_ExtraSample(TIFF *tif, uint16 count, uint16 *types) {
 	return TIFFSetField(tif, TIFFTAG_EXTRASAMPLES, count, types);
 }
+
+int TIFFGetField_ExtraSample(TIFF *tif, uint16 *count, uint16* types[]) {
+    return TIFFGetField(tif, TIFFTAG_EXTRASAMPLES, count, types);
+}
