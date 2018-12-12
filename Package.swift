@@ -3,7 +3,10 @@ import PackageDescription
 
 let package = Package(
 	name: "CLibTIFF",
-	targets: [ // ]
-        Target(name: "CLibTIFF")
+	products: [
+		.library(name: "CLibTIFF", targets: ["CLibTIFF"])
+	],
+	targets: [
+		.target(name: "CLibTIFF", dependencies: [])
 	]
 )
