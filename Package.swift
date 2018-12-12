@@ -7,6 +7,6 @@ let package = Package(
 		.library(name: "CLibTIFF", targets: ["CLibTIFF"])
 	],
 	targets: [
-		.target(name: "CLibTIFF", dependencies: [], path: "./Sources", publicHeadersPath: "./Sources")
+		.target(name: "CLibTIFF", dependencies: [], path: "./Sources", publicHeadersPath: "./Sources/include")
 	]
 )
